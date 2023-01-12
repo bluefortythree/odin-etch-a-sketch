@@ -1,10 +1,9 @@
 const body = document.body
-
+const div = document.getElementById('parent')
 
 for (let i=0; i<16; i++) {
     const squares = document.createElement('div')
     squares.innerText = "Hello World"
-    body.append(squares)
+    div.append(squares)
 }
-
 
