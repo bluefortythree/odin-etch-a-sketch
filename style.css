@@ -1,0 +1,33 @@
+#parent {
+    display: flex;
+    padding: 20px;
+    
+}
+
+.row {
+    color: green;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    gap: 20px;
+    flex: 1;
+    
+}
+
+.column {
+    color: red;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    
+    
+}
+
+.row, 
+.column {
+    border: 1px solid black;
+}
