@@ -11,3 +11,13 @@ for (let i=0; i<16; i++) {
         row.append(column)
     }
 }
+
+for(let i=0; i<256; i++) {
+    const hover = document.getElementsByClassName('column')[i];{
+        hover.addEventListener('mouseover', () => {
+            hover.setAttribute('style', 'background-color: pink;')
+        })
+    }
+}
+
+
