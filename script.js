@@ -13,11 +13,16 @@ for (let i=0; i<16; i++) {
 }
 
 for(let i=0; i<256; i++) {
-    const hover = document.getElementsByClassName('column')[i];{
-        hover.addEventListener('mouseover', () => {
-            hover.setAttribute('style', 'background-color: pink;')
+    const hover = document.getElementsByClassName('column')[i]; 
+    hover.addEventListener('mouseover', () => {
+        hover.setAttribute('style', 'background-color: pink;')
         })
-    }
+    hover.addEventListener('click', () => {
+        hover.setAttribute('style', 'background-color: white;')
+    })
+    const button = document.querySelector('button');
+    button.addEventListener('click', () => {
+        hover.setAttribute('style', 'background-color: white;')
+    })
 }
-
 

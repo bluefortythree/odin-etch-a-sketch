@@ -22,3 +22,12 @@
     width: 50px;
     border: 1px solid black;
 }
+
+#top {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-size: 24px;
+}
