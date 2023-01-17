@@ -1,8 +1,6 @@
 const body = document.body
 const div = document.getElementById('parent')
 
-let initialSize = 960;
-
 let width = makeGrid()
 function makeGrid() {
     for (i=0; i<1; i++) {
@@ -18,7 +16,9 @@ function makeGrid() {
 
 console.log(width);
 
-let dimensions = initialSize/width+'px';
+let initialSize = 868;
+
+let dimensions = (initialSize/width)+'px';
 console.log(dimensions);
 
 for (let i=0; i<width; i++) {
@@ -34,13 +34,20 @@ for (let i=0; i<width; i++) {
     }
 }
 
-
-
-
 for(let i=0; i<width*width; i++) {
-    const hover = document.getElementsByClassName('column')[i];
+    const hover = document.getElementsByClassName('column')[i]
+    const row = document.getElementsByClassName('row')[i];
+    let divColor = getRandomColor();
+    function getRandomColor() {
+        let letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i=0; i<6; i++) {
+            color += letters[Math.floor(Math.random()*16)];
+        }
+        return color;
+    }
     hover.addEventListener('mouseover', () => {
-        hover.style.backgroundColor = 'pink'
+        hover.style.backgroundColor = divColor
         })
     hover.addEventListener('click', () => {
         hover.style.backgroundColor = 'white'
@@ -50,3 +57,9 @@ for(let i=0; i<width*width; i++) {
         hover.style.backgroundColor = 'white'
     })
 }
+
+let changeSize = document.getElementById('changeSize');
+changeSize.addEventListener('click', () => {
+    location.reload();
+})
+

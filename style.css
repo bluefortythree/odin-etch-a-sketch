@@ -16,13 +16,13 @@
 
 .column {
     text-align: center;
-    border: 1px solid black;
+    outline: 1px solid black;
 }
 
 #top {
     display: flex;
-    justify-content: center;
-    border: 1px solid black;
+    justify-content: space-evenly;
+    outline: 1px solid black;
     margin-bottom: 10px;
 }
 
